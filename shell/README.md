@@ -32,4 +32,5 @@ The shell will support redirection of standard input, output, and error streams.
 * Piping Between Two Processes:
 The shell will support piping, allowing the output of one command to be used as the input to another command. This is useful for chaining commands together to perform complex operations.
 ## Help
-![help](https://github.com/user-attachments/assets/d1f43c58-fed7-483b-88f3-13de3537ba3d)
+![help](https://github.com/user-attachments/assets/232c2099-c094-4d1f-9526-76e00b059a3c)
+
