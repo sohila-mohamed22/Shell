@@ -1,36 +1,56 @@
-# Custom Shell 
-## Overview
-This project implements a custom shell that provides both internal and external command execution. The shell is designed to mimic the functionality of standard Unix-like shells, with additional features and custom internal commands. It supports essential shell features such as input/output redirection and process piping.
-## Current Features
-### 1. Internal Commands
-The shell currently supports the following internal commands:
-* mycp: Copy files and directories.
-* mymv: Move or rename files and directories.
-* type: Display the type of a command (whether it's an internal command or an external command).
-* help: Provide help information for internal commands.
-* exit: Exit the shell.
-* cd: Change the current working directory.
-* myenvir: Display environment variables.
-### 3. External Commands
-* Execution of External Commands: The shell supports executing any external command that is available in the system's PATH environment variable.
-## New Features to be Added
-### 1. Additional Internal Commands
-* free Command: This command will print detailed information about the system's memory usage, including:
-RAM Information:
-Total size
-Used memory
-Free memory
-Swap Area Information:
-Total size
-Used swap
-Free swap
-* uptime Command: This command will display the system uptime and the time spent in the idle process, providing insights into how long the system has been running and its idle state duration.
+# 🐚 Custom Shell README
 
-### 2. Shell Features
-* Input, Output, and Error Redirection:
-The shell will support redirection of standard input, output, and error streams. This allows users to direct input from files, output to files, or capture error messages in a file.
-* Piping Between Two Processes:
-The shell will support piping, allowing the output of one command to be used as the input to another command. This is useful for chaining commands together to perform complex operations.
-## Help
-![help](https://github.com/user-attachments/assets/232c2099-c094-4d1f-9526-76e00b059a3c)
+## 📚 Table of Contents
+- [🔍 Introduction](#-introduction)
+- [📜 Overview](#-overview)
+- [✨ Features](#-features)
+  - [🚀 Command Execution](#1--command-execution)
+  - [🔗 Piping Between Processes](#2--piping-between-processes)
+  - [📥 Redirection](#3--redirection)
+- [⚙️ Installation and Compilation](#%EF%B8%8F-installation-and-compilation)
 
+## 🔍 Introduction
+
+A **shell** is a command-line interpreter that allows users to interact with the operating system by typing commands. Shells provide an interface between the user and the kernel, enabling tasks such as file management, program execution, and system control. Popular shells include `bash`, `zsh`, and `sh`, each with unique features and scripting capabilities. Shells are a fundamental part of Unix-like operating systems, allowing users to execute commands either interactively or through scripts.
+
+## 📜 Overview
+This custom shell program is designed to read user commands, interpret them, and execute them much like a typical shell environment. It supports basic commands, piping, and redirection, offering functionality similar to common Unix shells but with custom commands (`mypwd`, `myecho`, etc.). The shell also allows file management operations such as copying and moving files with built-in options like `-a` (append) and `-f` (force).
+
+## ✨ Features
+
+### 1. 🚀 Command Execution
+The shell reads user input and tokenizes it into arguments to be executed either as built-in commands or external commands. Supported commands include:
+
+- 🗂️ **mypwd** - Print the current working directory.
+- 🔊 **myecho** - Echo the user input.
+- ❌ **exit** - Exit the shell.
+- 📋 **mycp** - Copy files with optional `-a` for appending.
+- 📝 **mymv** - Move files with optional `-f` for force overwrite.
+- 📂 **cd** - Change the current working directory.
+- 🌍 **myenv** - Print environment variables.
+- 🔍 **type** - Display the type of a command.
+- 💾 **myfree** - Show RAM information.
+- ⏲️ **myuptime** - Display system uptime.
+- ❓ **help** - Show a help message.
+
+### 2. 🔗 Piping Between Processes
+The shell supports piping between two commands using the `|` symbol, where the output of the first command is passed as the input to the second command.
+
+### 3. 📥 Redirection
+Input, output, and error redirection are supported. For example, you can redirect command output to a file or read input from a file.
+
+## ⚙️ Installation and Compilation 
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+### Step 2: Compile the code
+```bash
+gcc Shell.c command.c -o shell
+```
+### Step 3: Run the shell
+```bash
+./shell
+```
